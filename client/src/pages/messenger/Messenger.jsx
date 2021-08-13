@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
 
+import Topbar from "../../components/topbar/Topbar";
 import "./messenger.css";
 
 export default function Messenger() {
-    return (
-        <div className="messenger">
-            hello
-        </div>
-    )
+  return (
+    <>
+      <Topbar />
+      <div className="messenger">hello</div>
+    </>
+  );
 }
