@@ -1,3 +1,14 @@
 .messenger {
-  background-color: white;
+  height: calc(100vh - 70px);
+  display: flex;
+}
+
+.chatMenu {
+  flex: 3.5;
+}
+.chatBox {
+  flex: 5.5;
+}
+.chatOnline {
+  flex: 3;
 }

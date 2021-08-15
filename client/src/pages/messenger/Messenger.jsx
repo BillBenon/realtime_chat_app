@@ -7,7 +7,11 @@ export default function Messenger() {
   return (
     <>
       <Topbar />
-      <div className="messenger">hello</div>
+      <div className="messenger">
+        <div className="chatMenu"></div>
+        <div className="chatBox"></div>
+        <div className="chatOnline"></div>
+      </div>
     </>
   );
 }
