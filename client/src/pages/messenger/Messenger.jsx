@@ -8,9 +8,15 @@ export default function Messenger() {
     <>
       <Topbar />
       <div className="messenger">
-        <div className="chatMenu"></div>
-        <div className="chatBox"></div>
-        <div className="chatOnline"></div>
+        <div className="chatMenu">
+          <div className="chatMenuWrapper">menu</div>
+        </div>
+        <div className="chatBox">
+          <div className="chatBoxWrapper">boxx</div>
+        </div>
+        <div className="chatOnline">
+          <div className="chatOnlineWrapper">online</div>
+        </div>
       </div>
     </>
   );
