@@ -1,6 +1,6 @@
 import React from "react";
 
-import ChatOnline from "../../components/conversations/chatOnline/ChatOnline";
+import ChatOnline from "../../components/chatOnline/ChatOnline";
 import Conversation from "../../components/conversations/Conversation";
 import Message from "../../components/message/Message";
 import Topbar from "../../components/topbar/Topbar";
