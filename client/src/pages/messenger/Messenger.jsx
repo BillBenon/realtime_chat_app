@@ -1,5 +1,6 @@
 import React from "react";
 
+import Conversation from "../../components/conversations/Conversation";
 import Topbar from "../../components/topbar/Topbar";
 import "./messenger.css";
 
@@ -11,6 +12,10 @@ export default function Messenger() {
         <div className="chatMenu">
           <div className="chatMenuWrapper">
             <input placeholder="Search for friends" className="chatMenuInput" />
+            <Conversation />
+            <Conversation />
+            <Conversation />
+            <Conversation />
           </div>
         </div>
         <div className="chatBox">
