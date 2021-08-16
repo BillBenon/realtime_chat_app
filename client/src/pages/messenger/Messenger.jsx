@@ -9,7 +9,9 @@ export default function Messenger() {
       <Topbar />
       <div className="messenger">
         <div className="chatMenu">
-          <div className="chatMenuWrapper">menu</div>
+          <div className="chatMenuWrapper">
+            <input placeholder="Search for friends" className="chatMenuInput" />
+          </div>
         </div>
         <div className="chatBox">
           <div className="chatBoxWrapper">boxx</div>
