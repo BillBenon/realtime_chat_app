@@ -25,8 +25,30 @@ export default function Messenger() {
               <Message />
               <Message own={true} />
               <Message />
+              <Message own={true} />
+              <Message />
+              <Message own={true} />
+              <Message />
+              <Message own={true} />
+              <Message />
+              <Message own={true} />
+              <Message />
+              <Message own={true} />
+              <Message />
+              <Message own={true} />
+              <Message />
+              <Message own={true} />
+              <Message />
+              <Message own={true} />
+              <Message />
             </div>
-            <div className="chatBoxBottom"></div>
+            <div className="chatBoxBottom">
+              <textarea
+                className="chatMessageInput"
+                placeholder="Write something..."
+              ></textarea>
+              <button className="chatSubmitButton">Send</button>
+            </div>
           </div>
         </div>
         <div className="chatOnline">
