@@ -1,6 +1,7 @@
 import React from "react";
 
 import Conversation from "../../components/conversations/Conversation";
+import Message from "../../components/message/Message";
 import Topbar from "../../components/topbar/Topbar";
 import "./messenger.css";
 
@@ -19,7 +20,14 @@ export default function Messenger() {
           </div>
         </div>
         <div className="chatBox">
-          <div className="chatBoxWrapper">boxx</div>
+          <div className="chatBoxWrapper">
+            <div className="chatBoxTop">
+              <Message />
+              <Message own={true} />
+              <Message />
+            </div>
+            <div className="chatBoxBottom"></div>
+          </div>
         </div>
         <div className="chatOnline">
           <div className="chatOnlineWrapper">online</div>
