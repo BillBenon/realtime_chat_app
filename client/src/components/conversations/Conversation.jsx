@@ -6,6 +6,7 @@ import "./conversation.css";
 
 export default function Conversation({ conversation, currentUser }) {
   const [user, setUser] = useState(null);
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
   useEffect(() => {
     const friendId = conversation.members.find((m) => m !== currentUser._id);
@@ -25,7 +26,9 @@ export default function Conversation({ conversation, currentUser }) {
     <div className="conversation">
       <img
         className="conversationImg"
-        src="https://pbs.twimg.com/profile_images/1289147062471229441/fwvKRZFJ_400x400.jpg"
+        src={
+          user.profilePicture ? user.profilePicture : PF + "person/noAvatar.png"
+        }
         alt=""
       />
       <span className="conversationName">{user.username}</span>
