@@ -1,2 +1,4 @@
 const router = require("express").Router();
-const Post = require("../models/Post");
+const Conversation = require("../models/Conversation");
+
+module.exports = router;
