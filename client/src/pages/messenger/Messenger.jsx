@@ -26,6 +26,19 @@ export default function Messenger() {
     };
     getConversations();
   }, [user._id]);
+
+  useEffect(() => {
+    const getMessages = async () => {
+      try {
+        const res = await axios.get("/messages/" + currentChat?._id);
+        setMessages(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getMessages();
+  }, [currentChat]);
+
   return (
     <>
       <Topbar />
