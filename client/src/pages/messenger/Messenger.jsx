@@ -40,34 +40,40 @@ export default function Messenger() {
         </div>
         <div className="chatBox">
           <div className="chatBoxWrapper">
-            <div className="chatBoxTop">
-              <Message />
-              <Message own={true} />
-              <Message />
-              <Message own={true} />
-              <Message />
-              <Message own={true} />
-              <Message />
-              <Message own={true} />
-              <Message />
-              <Message own={true} />
-              <Message />
-              <Message own={true} />
-              <Message />
-              <Message own={true} />
-              <Message />
-              <Message own={true} />
-              <Message />
-              <Message own={true} />
-              <Message />
-            </div>
-            <div className="chatBoxBottom">
-              <textarea
-                className="chatMessageInput"
-                placeholder="Write something..."
-              ></textarea>
-              <button className="chatSubmitButton">Send</button>
-            </div>
+            {currentChat ? (
+              <>
+                <div className="chatBoxTop">
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                  <Message own={true} />
+                  <Message />
+                </div>
+                <div className="chatBoxBottom">
+                  <textarea
+                    className="chatMessageInput"
+                    placeholder="Write something..."
+                  ></textarea>
+                  <button className="chatSubmitButton">Send</button>
+                </div>
+              </>
+            ) : (
+              <span>Open a conversation to start a chat.</span>
+            )}
           </div>
         </div>
         <div className="chatOnline">
