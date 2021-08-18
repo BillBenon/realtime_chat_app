@@ -11,6 +11,8 @@ import "./messenger.css";
 
 export default function Messenger() {
   const [conversations, setConversations] = useState([]);
+  const [currentChat, setCurrentChat] = useState(null);
+  const [messages, setMessages] = useState([]);
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
