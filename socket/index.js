@@ -11,11 +11,21 @@ const addUser = (userId, socketId) => {
     users.push({ userId, socketId });
 };
 
+const removeUser = (socketId) => {
+  users = users.filter((user) => user.socketId !== socketId);
+};
+
 io.on("connection", (socket) => {
   console.log("Client connected!");
   // take userId and socketId from user
   socket.on("addUser", (userId) => {
     addUser(userId, socket.id);
+    io.emit("getUsers", users);
+  });
+
+  socket.on("disconnect", () => {
+    console.log("User disconnected!");
+    removeUser(socket.id);
     io.emit("getUsers", users);
   });
 });
