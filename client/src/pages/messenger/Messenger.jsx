@@ -24,6 +24,12 @@ export default function Messenger() {
   }, []);
 
   useEffect(() => {
+    socket?.on("welcome", (message) => {
+      console.log(message);
+    });
+  }, [socket]);
+
+  useEffect(() => {
     const getConversations = async () => {
       try {
         const res = await axios.get("/conversations/" + user._id);
