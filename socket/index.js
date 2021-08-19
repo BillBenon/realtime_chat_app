@@ -16,6 +16,7 @@ const removeUser = (socketId) => {
 };
 
 io.on("connection", (socket) => {
+  // when connect
   console.log("Client connected!");
   // take userId and socketId from user
   socket.on("addUser", (userId) => {
@@ -23,6 +24,9 @@ io.on("connection", (socket) => {
     io.emit("getUsers", users);
   });
 
+  // seen and get message
+
+  // when disconnect
   socket.on("disconnect", () => {
     console.log("User disconnected!");
     removeUser(socket.id);

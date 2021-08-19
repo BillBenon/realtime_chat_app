@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 
 import axios from "axios";
-import io from "socket.io-client";
+import { io } from "socket.io-client";
 
 import ChatOnline from "../../components/chatOnline/ChatOnline";
 import Conversation from "../../components/conversations/Conversation";
@@ -18,6 +18,10 @@ export default function Messenger() {
   const socket = useRef(io("ws://localhost:8900"));
   const { user } = useContext(AuthContext);
   const scrollRef = useRef();
+
+  useEffect(() => {
+    socket.current = io("ws://localhost:8900");
+  }, []);
 
   useRef(() => {
     socket.current.emit("addUser", user._id);
